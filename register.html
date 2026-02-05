@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Авоська</title>
+    <meta name="viewport" content="width=1920, initial-scale=1.0">
+
+    <!-- Локальный Bootstrap -->
+    <link rel="stylesheet" href="css//boootstrapcss/bootstrap.min.css">
+    <link rel="stylesheet" href="css/customcss/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-bread-slice me-2"></i>Пекарня «Хлебная»
+        </a>
+    </div>
+</nav>
+<!-- Контейнер -->
+    <div class="container mt-5 fade-in">
+        <div class="row justify-content-center">
+            <div class="col-5">
+
+                <h2 class="mb-4 text-center">Регистрация</h2>
+
+                <form id="registerForm">
+    <div class="mb-3">
+        <label class="form-label">ФИО*</label>
+        <input type="text" class="form-control" name="fullname" 
+               pattern="[А-Яа-яA-Za-z\s]+" 
+               title="Только буквы и пробелы" >
+    </div>
+    
+    <div class="mb-3">
+        <label class="form-label">Телефон*</label>
+        <input type="tel" class="form-control" name="phone"
+               pattern="8\(\d{3}\)-\d{3}-\d{2}-\d{2}"
+               placeholder="8(XXX)-XXX-XX-XX" >
+    </div>
+    
+    <div class="mb-3">
+        <label class="form-label">Email* (уникальный)</label>
+        <input type="email" class="form-control" name="email" >
+    </div>
+    
+    <div class="mb-3">
+        <label class="form-label">Пароль* (минимум 3 символа, хотя бы 1 цифра)</label>
+        <input type="password" class="form-control" name="password"
+               minlength="3" pattern=".*\d.*"
+               title="Минимум 3 символа, включая хотя бы одну цифру" >
+    </div>
+    
+    <div class="mb-3">
+        <label class="form-label">Адрес доставки*</label>
+        <input type="text" class="form-control" name="address" >
+    </div>
+    
+    <button type="submit" class="btn btn-warning w-100">Зарегистрироваться</button>
+</form>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

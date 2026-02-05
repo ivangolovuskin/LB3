@@ -1,0 +1,423 @@
+:root {
+   
+    --bg: #FFF9F3;            
+    --card: #FFFFFF;          
+    
+    
+    --brand: #C76A2B;         
+    --brand-contrast: #FFFFFF;
+    
+    --gold: #F6A623;          
+    --wheat: #FFD8A6;         
+    
+    
+    --text: #222222;          
+    --muted: #6B7280;         
+    
+    
+    --success: #2F9D67;       
+    --warning: #F59E0B;       
+    --danger: #D9534F;        
+    
+    
+    --border: #E9ECEF;        
+    --shadow: rgba(15,23,42,0.06);
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+}
+
+/* Навигация */
+.navbar-dark {
+    background-color: var(--brand) ;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--brand-contrast) ;
+}
+
+.nav-link {
+    color: var(--brand-contrast) ;
+    opacity: 0.9;
+}
+
+.nav-link:hover, .nav-link.active {
+    opacity: 1;
+    color: var(--brand-contrast) ;
+    text-decoration: underline;
+}
+
+/* Карточки */
+.feature-card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+.feature-card .icon {
+    margin-bottom: 1rem;
+    color: var(--brand);
+    font-size: 2.5rem;
+}
+
+.feature-card h5 {
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.shadow-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(199, 106, 43, 0.1) ;
+    border-color: var(--wheat);
+    transition: all 0.3s ease;
+}
+
+/* Анимации */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Кнопки */
+.btn-brand {
+    background-color: var(--brand);
+    border-color: var(--brand);
+    color: var(--brand-contrast);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+}
+
+.btn-brand:hover {
+    background-color: #B25925;
+    border-color: #B25925;
+    color: var(--brand-contrast);
+}
+
+.btn-outline-brand {
+    color: var(--brand);
+    border-color: var(--brand);
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.btn-outline-brand:hover {
+    background-color: var(--brand);
+    border-color: var(--brand);
+    color: var(--brand-contrast);
+}
+
+/* CTA */
+.btn-gold {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--text);
+    font-weight: 600;
+}
+
+.btn-gold:hover {
+    background-color: #E09520;
+    border-color: #E09520;
+    color: var(--text);
+}
+
+.btn-outline-gold {
+    color: var(--gold);
+    border-color: var(--gold);
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--text);
+}
+
+/* Формы */
+.form-control, .form-select {
+    border: 1px solid var(--border);
+    background-color: var(--card);
+    color: var(--text);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--brand);
+    box-shadow: 0 0 0 0.25rem rgba(199, 106, 43, 0.25);
+    background-color: var(--card);
+}
+
+.form-label {
+    color: var(--text);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-text {
+    color: var(--muted);
+}
+
+/* Таблицы */
+.table {
+    background-color: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.table thead th {
+    background-color: var(--wheat);
+    border-color: var(--border);
+    color: var(--text);
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.table tbody td {
+    border-color: var(--border);
+    padding: 0.75rem 1rem;
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(255, 216, 166, 0.1);
+}
+
+/* Статус */
+.badge {
+    padding: 0.4em 0.8em;
+    font-weight: 500;
+}
+
+.badge.bg-brand {
+    background-color: var(--brand) ;
+    color: var(--brand-contrast);
+}
+
+.badge.bg-gold {
+    background-color: var(--gold) ;
+    color: var(--text);
+}
+
+.badge.bg-success {
+    background-color: var(--success) ;
+}
+
+.badge.bg-warning {
+    background-color: var(--warning) ;
+}
+
+.badge.bg-danger {
+    background-color: var(--danger) ;
+}
+
+/* Карточки статистики */
+.card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.card-header {
+    background-color: var(--wheat);
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+/* Подвал */
+.footer {
+    background-color: var(--text) ;
+    color: var(--brand-contrast);
+}
+
+.footer .text-white-50 {
+    color: rgba(255, 255, 255, 0.7) ;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--brand-contrast);
+}
+
+/* Пагинация */
+.page-link {
+    color: var(--brand);
+    border-color: var(--border);
+    background-color: var(--card);
+}
+
+.page-link:hover {
+    color: var(--brand);
+    background-color: var(--wheat);
+    border-color: var(--border);
+}
+
+.page-item.active .page-link {
+    background-color: var(--brand);
+    border-color: var(--brand);
+    color: var(--brand-contrast);
+}
+
+/* Оповещения */
+.alert {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+}
+
+.alert-warning {
+    background-color: rgba(255, 216, 166, 0.3);
+    border-color: var(--wheat);
+    color: var(--text);
+}
+
+.alert-danger {
+    background-color: rgba(217, 83, 79, 0.1);
+    border-color: var(--danger);
+    color: var(--text);
+}
+
+.alert-success {
+    background-color: rgba(47, 157, 103, 0.1);
+    border-color: var(--success);
+    color: var(--text);
+}
+
+/* Каталог товаров */
+.product-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--shadow);
+    border-color: var(--wheat);
+}
+
+.product-card .card-body {
+    padding: 1.5rem;
+}
+
+.product-card .price {
+    color: var(--brand);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+    
+    .btn-group .btn {
+        padding: 0.375rem 0.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .navbar-nav {
+        padding-top: 1rem;
+    }
+}
+
+/* Ховер эффекты */
+.hover-text-white:hover {
+    color: var(--brand-contrast) ;
+}
+
+/* Утилиты */
+.text-muted {
+    color: var(--muted) ;
+}
+
+.text-brand {
+    color: var(--brand) ;
+}
+
+.text-gold {
+    color: var(--gold) ;
+}
+
+.bg-wheat {
+    background-color: var(--wheat) ;
+}
+
+.border-color {
+    border-color: var(--border) ;
+}
+
+
+.section-wheat {
+    background-color: var(--wheat);
+    padding: 3rem 0;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+/*  счетчик товаров */
+.input-group .btn {
+    border-color: var(--border);
+    color: var(--text);
+}
+
+.input-group .btn:hover {
+    background-color: var(--wheat);
+    border-color: var(--border);
+}
+
+/* Заголовки */
+.display-4 {
+    color: var(--text);
+    font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* Разделители */
+hr {
+    border-color: var(--border);
+    opacity: 0.5;
+}
